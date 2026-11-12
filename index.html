@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0e0f13">
+<title>Training Arc</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main id="view"></main>
+
+<nav class="tabs" id="tabs">
+  <button data-tab="today" class="on"><span>Today</span></button>
+  <button data-tab="journey"><span>Journey</span></button>
+  <button data-tab="ascent"><span>Ascent</span></button>
+  <button data-tab="log"><span>Log</span></button>
+</nav>
+
+<div id="toast" role="status" aria-live="polite"></div>
+
+<dialog id="edit">
+  <form method="dialog" id="editForm">
+    <h3 id="editTitle">Edit day</h3>
+    <label>Push-ups <input name="p" inputmode="numeric"></label>
+    <label>Distance (km) <input name="km" inputmode="decimal"></label>
+    <label>Calories <input name="kcal" inputmode="numeric"></label>
+    <div class="row">
+      <button value="cancel" class="ghost">Cancel</button>
+      <button value="save" class="solid">Save</button>
+    </div>
+  </form>
+</dialog>
+
+<script src="app.js"></script>
+</body>
+</html>
